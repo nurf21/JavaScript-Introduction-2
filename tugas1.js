@@ -4,7 +4,7 @@
 
 // ----------------------------- JAWABAN -----------------------------
 
-// 1. charAt() -> Me-return karakter pada index spesifik dalam sebuah string
+// 1. charAt() -> me-return karakter pada index spesifik dalam sebuah string
 // Syntax : string.charAt(index)
 // Contoh :
 
@@ -22,18 +22,19 @@
 // Contoh : 
 
 // let str = 'Hello';
-// let str2 = ',';
-// let str3 = 'World';
-// let str4 = '!';
+// let str2 = 'World';
 
 // console.log(str);
 // console.log(str2);
+
+// let str3 = str.concat(str2);
+
 // console.log(str3);
-// console.log(str4);
 
-// let str5 = str.concat(str2, str3, str4);
+// let words = ['Hello', 'World'];
+// let nums = [1, 2, 3];
 
-// console.log(str5);
+// console.log(words.concat(nums));
 
 // 3. replace() -> mencari value spesifik dalam sebuah string, lalu me-return string baru
 // yang dimana value spesifik tadi sudah diganti
@@ -102,4 +103,22 @@
 
 // console.log(lowStr);
 
-// 
+// 9. every() -> mengecek apakah seluruh element pada array memenuhi kondisi
+// Syntax : array.every(function)
+// Contoh :
+
+// let ages = [30, 21, 7, 5, 13];
+// let result = ages.every((value) => value >= 17);
+
+// if (result === false) {
+//     console.log('Ada usia yang dibawah 17 tahun');
+// } else {
+//     console.log('Seluruh usia 17 tahun keatas');
+// }
+
+// 10. reverse() -> membalikkan urutan element pada sebuah array
+// Syntax : array.reverse()
+// Contoh : 
+
+// let arr = ['A', 1, 'B', 2, 'C', 3];
+// console.log(arr.reverse());
