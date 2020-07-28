@@ -30,7 +30,8 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
         console.log('Jumlah angka dalam dataArray tidak ada');
     } else {
         const filteredArray = dataArray.filter((value) => value>nilaiAwal && value<nilaiAkhir);
-        const result = filteredArray.sort(function(a, b){return a-b;});
+        // const result = filteredArray.sort(function(a, b){return a-b;});
+        const result = filteredArray.sort((a, b) => a-b);
         console.log(result);
     }
 };
