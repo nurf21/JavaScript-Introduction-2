@@ -17,7 +17,7 @@ const names = ['Abigail', 'Alexandra', 'Alison', 'Amanda', 'Angela', 'Bella', 'C
 'Carolyn', 'Deirdre', 'Diana', 'Elizabeth','Ella', 'Faith', 'Olivia', 'Penelope'];
 
 const searchName = (key, lim, callback) => {
-    const filteredNames = names.filter(value => value.toLowerCase().includes(key.toLowerCase()));
+    const filteredNames = names.filter((value) => value.toLowerCase().includes(key.toLowerCase()));
     const result = filteredNames.slice(0, lim);
     callback(result);
 };
@@ -25,4 +25,5 @@ const searchName = (key, lim, callback) => {
 const showResult = (result) => {
     console.log(result);
 };
+
 searchName('an', 3, showResult);

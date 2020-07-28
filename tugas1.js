@@ -8,7 +8,7 @@
 // Syntax : string.charAt(index)
 // Contoh :
 
-// let str = 'Hello, World!';
+// const str = 'Hello, World!';
 
 // console.log(str.length-1);
 
@@ -18,21 +18,20 @@
 // console.log(`Index ke-12 / karakter ke-13 pada str adalah ${str.charAt(12)}`);
 
 // 2. concat() -> menggabungkan 2 atau lebih string / array
-// Syntax : string.concat(string2, string3, ..., stringX)
+// Syntax : string1.concat(string2, string3, ..., stringX) atau
+//          array1.concat(array2, array3, ..., arrayX)
 // Contoh : 
 
-// let str = 'Hello';
-// let str2 = 'World';
+// const str = 'Hello';
+// const str2 = 'World';
 
 // console.log(str);
 // console.log(str2);
 
-// let str3 = str.concat(str2);
+// console.log(str.concat(str2));
 
-// console.log(str3);
-
-// let words = ['Hello', 'World'];
-// let nums = [1, 2, 3];
+// const words = ['Hello', 'World'];
+// const nums = [1, 2, 3];
 
 // console.log(words.concat(nums));
 
@@ -41,23 +40,23 @@
 // Syntax : string.replace(searchvalue, newvalue)
 // Contoh :
 
-// let str = 'Nama saya Budi, umur saya 20 tahun. Saya adalah seorang Web Developer';
+// const str = 'Nama saya Budi, umur saya 20 tahun. Saya adalah seorang Web Developer';
 
-// let newStr = str.replace('saya', 'kamu');
+// const newStr = str.replace('saya', 'kamu');
 // console.log(newStr);
 
-// let newStr = str.replace(/saya/g, 'kamu');
+// const newStr = str.replace(/saya/g, 'kamu');
 // console.log(newStr);
 
-// let newStr = str.replace(/saya/gi, 'kamu');
+// const newStr = str.replace(/saya/gi, 'kamu');
 // console.log(newStr);
 
 // 4. search() -> mencari value spesifik dalam sebuah string, lalu me-return posisi indexnya
 // Syntax : string.search(searchvalue)
 // Contoh : 
 
-// let str = 'Ini adalah mobil berwarna merah';
-// let match = str.search(/mobil/i);
+// const str = 'Ini adalah mobil berwarna merah';
+// const match = str.search(/mobil/i);
 
 // console.log(match);
 
@@ -67,21 +66,28 @@
 //     console.log('variabel str mengandung kata mobil');
 // }
 
-// 5. slice() -> meng-ekstrak bagian dari string, lalu me-return bagian yang diekstrak ke dalam string baru
-// Syntax : string.slice(start, end)
+// 5. slice() -> meng-ekstrak bagian dari string atau array, lalu me-return bagian 
+// yang diekstrak ke dalam string atau array baru
+// Syntax : string.slice(start, end) atau
+//          array.slice(start, end)
 // Contoh :
 
-// let str = 'Hello, World!';
-// let newStr = str.slice(7, -1);
+// const str = 'Hello, World!';
+// const newStr = str.slice(7, -1);
 
 // console.log(newStr);
+
+// const fruits = ['Apple', 'Orange', 'Mango', 'Banana', 'Durian'];
+// const newFruits = fruits.slice(1, 4);
+
+// console.log(newFruits);
 
 // 6. split() -> digunakan untuk memisahkan string menjadi array substring dan me-return array baru
 // Syntax : string.split(separator, limit)
 // Contoh : 
 
-// let str = 'Ini adalah mobil berwarna merah';
-// let newStr = str.split(' ', 3);
+// const str = 'Ini adalah mobil berwarna merah';
+// const newStr = str.split(' ', 3);
 
 // console.log(newStr);
 
@@ -89,31 +95,29 @@
 // Syntax : string.toLowerCase()
 // Contoh :
 
-// let str = 'Hello, World!';
-// let lowStr = str.toLowerCase();
+// const str = 'Hello, World!';
 
-// console.log(lowStr);
+// console.log(str.toLowerCase());
 
 // 8. toUpperCase() -> mengubah string menjadi huruf besar
 // Syntax : string.toUpperCase()
 // Contoh :
 
-// let str = 'Hello, World!';
-// let lowStr = str.toUpperCase();
+// const str = 'Hello, World!';
 
-// console.log(lowStr);
+// console.log(str.toUpperCase());
 
 // 9. every() -> mengecek apakah seluruh element pada array memenuhi kondisi
-// Syntax : array.every(function)
+// Syntax : array.every(function(currentValue, index, arr))
 // Contoh :
 
-// let ages = [30, 21, 7, 5, 13];
-// let result = ages.every((value) => value >= 17);
+// const ages = [30, 21, 7, 5, 13];
+// const result = ages.every((value) => value >= 17);
 
-// if (result === false) {
-//     console.log('Ada usia yang dibawah 17 tahun');
+// if (!result) {
+//     console.log('Ada data usia yang dibawah 17 tahun');
 // } else {
-//     console.log('Seluruh usia 17 tahun keatas');
+//     console.log('Seluruh data usia 17 tahun keatas');
 // }
 
 // 10. reverse() -> membalikkan urutan element pada sebuah array
